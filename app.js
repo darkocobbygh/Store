@@ -7,7 +7,7 @@ const morgan= require('morgan');
 const bodyParser=require('body-parser');
 const mongoose= require('mongoose');
 
-mongoose.connect('mongodb://0.0.0.0:27017/myCommerce', {useNewUrlParser: true})
+mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true})
 
 const app= express();
 
